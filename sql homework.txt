@@ -1,0 +1,59 @@
+1. Write a sql query to fetch all records from table 'products' where
+'price' is 20 or 30
+
+Answer :
+SELECT * FROM products
+where price = 20 or price = 30
+
+
+2. Write a sql query to fetch all records from table 'products' where
+'productname' starts with 'T' and end with 'e'
+
+Answer :
+SELECT * FROM products
+where productname like 'T%e'
+
+
+3. Write a sql query to fetch all records from table 'Categories'
+having CategoryId in descending order
+
+Answer :
+SELECT * FROM categories
+order by categoryid desc
+
+
+4. Write a sql query to get an average of 'price' from table
+'products'
+
+Answer :
+SELECT avg(price) as avg FROM products
+
+
+5. Write a sql query to get the total number of records in table
+'Orders' 
+
+Answer :
+select  count(*) from orders
+
+
+6. Write a sql query to get unique list of 'productname'
+from table 'products'
+
+Answer :
+select  distinct productname from products
+
+
+7. Write a sql query to get 'unit' of product name 'Tofu' from table
+'products'
+
+Answer :
+select unit from products
+where productname = 'Tofu'
+
+
+8. Write a sql query to get sum of price of 'productid' being an odd
+number from table 'products'
+
+Answer :
+SELECT sum(price) FROM products 
+WHERE productid IN(SELECT productid FROM products WHERE productid%2 != 0);
